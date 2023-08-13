@@ -99,8 +99,11 @@ img {
 .nav-menu-item:hover {
   color: #404bbf;
 }
+.nav-menu-item.current {
+  color: #404bbf;
+}
 .nav-menu-item.current::after {
- background-color: #404bbf; 
+ background-color: #404bbf;
  content: "";
   position: absolute;
   bottom: 0;
