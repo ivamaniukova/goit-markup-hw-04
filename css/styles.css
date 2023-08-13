@@ -422,7 +422,6 @@ img {
 }
 .customers-list {
   display: flex;
-  justify-content: space-evenly;
   gap: 24px;
 }
 .customers-icon {
@@ -505,7 +504,6 @@ img {
 }
 .footer-wrapper {
   margin-right: 120px;
-  padding-left: 156px;
 }
 .ftr-social-media {
   display: flex;
