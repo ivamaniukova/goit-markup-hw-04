@@ -333,22 +333,22 @@ img {
 }
 .filter-item {
   width: calc((100% - 48px) / 3);
-  
+  transform: translateY(0%);
 }
-.filter-item:hover .overlay {
-  transform: translateX(0);
-}
+
 .filter-item-wrapper {
   display: block;
   gap: 32px;
+  
 }
 .filter-item-wrapper:hover, .filter-item-wrapper:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transform: translateY(0%);
+  
 }
 .overlay {
   position: relative;
   overflow: hidden;
+  
 }
 .overlay-text {
   position: absolute;
@@ -506,6 +506,7 @@ img {
 }
 .footer-wrapper {
   margin-right: 120px;
+  padding-left: 156px;
 }
 .ftr-social-media {
   display: flex;
