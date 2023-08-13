@@ -87,6 +87,7 @@ img {
   align-items: center;
 }
 .nav-menu-item {
+  position: relative;
   color: #404bbf;
   font-size: 16px;
   font-weight: 500;
@@ -97,20 +98,21 @@ img {
 .nav-menu-item:hover {
   color: #404bbf;
 }
-.current {
+.nav-menu-item::after {
   content: "";
-}
-.current::after {
-  background: #404bbf;
-  border-radius: 2px;
   position: absolute;
+  bottom: 0;
   left: 0;
-  bottom: -1px;
+  display: block;
+  
+  border-radius: 2px;
   width: 100%;
   height: 4px;
 }
-.nav-menu:hover,
-.nav-menu:focus {
+.nav-menu-item.current::after {
+ background-color: #404bbf; 
+}
+.nav-menu:hover, .nav-menu:focus {
   color: #404bbf;
 }
 .nav-menu-list {
@@ -130,8 +132,7 @@ img {
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.reference:hover,
-.reference:focus {
+.reference:hover, .reference:focus {
   color: #404bbf;
 }
 .address {
@@ -190,8 +191,7 @@ img {
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero-btn:hover,
-.hero-btn:focus {
+.hero-btn:hover, .hero-btn:focus {
   background-color: #404bbf;
 }
 .features-section {
@@ -322,8 +322,7 @@ img {
   border-radius: 4px;
   padding: 12px 24px;
 }
-.filter-btn:hover,
-.filter-btn:focus {
+.filter-btn:hover, .filter-btn:focus {
   background-color: #404bbf;
   color: var(--light);
   border: 1px solid transparent;
@@ -333,8 +332,7 @@ img {
   overflow: hidden;
   width: calc((100% - 48px) / 3);
 }
-.filter-item:hover,
-.filter-item:focus {
+.filter-item:hover, .filter-item:focus {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -402,6 +400,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-icon {
   width: 40px;
@@ -410,8 +409,7 @@ img {
 .icon {
   fill: var(--whitish);
 }
-.social-media-icons:hover,
-.social-media-icons:focus {
+.social-media-icons:hover, .social-media-icons:focus {
   background-color: #404bbf;
 }
 .features-section-four {
@@ -428,6 +426,7 @@ img {
   fill: currentColor;
 }
 .customers-list-item {
+  width: calc((100% - 120px) / 6);
   height: 88px;
 }
 .customers-list-icon {
@@ -442,8 +441,7 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.customers-list-icon:hover,
-.customers-list-icon:focus {
+.customers-list-icon:hover, .customers-list-icon:focus {
   border-color: #404bbf;
   color: #404bbf;
 }
@@ -475,6 +473,7 @@ img {
   max-width: 264px;
 }
 .footer-web {
+  position: relative;
   color: var(--blue);
   font-family: Raleway, sans-serif;
   font-size: 18px;
@@ -520,6 +519,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ftr-icon-item:hover,
 .ftr-icon-item:focus {
@@ -545,6 +545,7 @@ img {
   background: #FCFCFC;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn {
   position: absolute;
@@ -567,7 +568,7 @@ img {
   border: none;
   fill: #ffffff;
 }
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
